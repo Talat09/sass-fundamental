@@ -1,0 +1,98 @@
+//color variable declarations
+$header-bgcolor: rgb(8, 78, 119);
+$header-title: white;
+$main-bgcolor: #ffd354;
+$footer-bgcolor: rgb(8, 78, 119);
+$footer-padding: 20px 0px;
+$footer-text: center;
+$footer-textcolor: white;
+$footer-fontsize: 20px;
+//font size
+$para-fontsize: 15px;
+$para-padding: 15px;
+//about
+$about-space: 20px 15px;
+$about-padding: 20px 15px;
+$about-text: center;
+/* 
+browser reset code
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: $header-bgcolor;
+  text-align: center;
+  color: $header-title;
+}
+
+/*  nav css styling:
+
+nav{
+    margin-top:15px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    display: inline-block;
+    color:white;
+    text-decoration:none;
+    padding:10px
+    transition: .4s;
+    border-radius:5px
+}
+
+nav ul li a :hover {
+    background-color:black
+}
+*/
+nav {
+  margin-top: 15px;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin: 0 15px;
+      a {
+        display: inline-block;
+        color: #fdfeff;
+        text-decoration: none;
+        padding: 10px;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+      a:hover {
+        background: #000;
+      }
+    }
+  }
+}
+main {
+  background: $main-bgcolor;
+}
+footer {
+  background: $footer-bgcolor;
+  padding: $footer-padding;
+  text-align: $footer-text;
+  color: $footer-textcolor;
+  font-size: $footer-fontsize;
+}
+#about {
+  margin: $about-space;
+  text-align: $about-text;
+  padding: $about-padding;
+}
+#about p {
+  font-size: $para-fontsize;
+  padding: $para-padding;
+}
