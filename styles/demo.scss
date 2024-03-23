@@ -1,31 +1,26 @@
+@forward "index";
+@use "variables" as variable;
+// @use "mixins" as mixin;
 //color variable declarations
-$header-bgcolor: rgb(8, 78, 119);
-$header-title: white;
-$main-bgcolor: #ffd354;
-$footer-bgcolor: rgb(8, 78, 119);
-$footer-padding: 20px 0px;
-$footer-text: center;
-$footer-textcolor: white;
-$footer-fontsize: 20px;
-//font size
-$para-fontsize: 15px;
-$para-padding: 15px;
-//about
-$about-space: 20px 15px;
-$about-padding: 20px 15px;
-$about-text: center;
-/* 
-browser reset code
-*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// $header-bgcolor: rgb(8, 78, 119);
+// $header-title: white;
+// $main-bgcolor: #ffd354;
+// $footer-bgcolor: rgb(8, 78, 119);
+// $footer-padding: 20px 0px;
+// $footer-text: center;
+// $footer-textcolor: white;
+// $footer-fontsize: 20px;
+// //font size
+// $para-fontsize: 15px;
+// $para-padding: 15px;
+// //about
+// $about-space: 20px 15px;
+// $about-padding: 20px 15px;
+// $about-text: center;
 header {
-  background: $header-bgcolor;
+  background: variable.$header-bgcolor;
   text-align: center;
-  color: $header-title;
+  color: variable.$header-title;
 }
 
 /*  nav css styling:
@@ -78,21 +73,38 @@ nav {
   }
 }
 main {
-  background: $main-bgcolor;
+  background: variable.$main-bgcolor;
 }
 footer {
-  background: $footer-bgcolor;
-  padding: $footer-padding;
-  text-align: $footer-text;
-  color: $footer-textcolor;
-  font-size: $footer-fontsize;
+  background: variable.$footer-bgcolor;
+  padding: variable.$footer-padding;
+  text-align: variable.$footer-text;
+  color: variable.$footer-textcolor;
+  font-size: variable.$footer-fontsize;
 }
 #about {
-  margin: $about-space;
-  text-align: $about-text;
-  padding: $about-padding;
+  margin: variable.$about-space;
+  text-align: variable.$about-text;
+  padding: variable.$about-padding;
 }
 #about p {
-  font-size: $para-fontsize;
-  padding: $para-padding;
+  font-size: variable.$para-fontsize;
+  padding: variable.$para-padding;
+}
+@mixin para-style($size, $style) {
+  font-size: $size;
+  text-align: $style;
+  padding: variable.$para-padding;
+  margin: 20px 0px;
+}
+
+#education {
+  background-color: bisque;
+  margin: variable.$about-space;
+  text-align: variable.$about-text;
+  padding: variable.$about-padding;
+  border-radius: 10px 10px 0px 0;
+}
+#education p {
+  @include para-style(20px, justify);
 }
