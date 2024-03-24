@@ -91,6 +91,25 @@ footer {
   font-size: variable.$para-fontsize;
   padding: variable.$para-padding;
 }
+//inheritance class .btn-download inherit .btn class
+.btn {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 9px;
+}
+.btn-download {
+  @extend .btn;
+  color: rgb(107, 107, 107);
+}
+.learn-more {
+  @extend .btn;
+  color: #054a75;
+  margin-left: 10px;
+  font-weight: 600;
+}
 @mixin para-style($size, $style) {
   font-size: $size;
   text-align: $style;
