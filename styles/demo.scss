@@ -1,5 +1,21 @@
 @forward "index";
 @use "variables" as variable;
+$colors: (
+  color1: red,
+  color2: green,
+  color3: blue,
+);
+//map over items using @each
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+// @each $color in gray, green, blue {
+//   .#{$color}-text {
+//     color: $color;
+//   }
+// }
 // @use "mixins" as mixin;
 //color variable declarations
 // $header-bgcolor: rgb(8, 78, 119);
@@ -151,7 +167,7 @@ $i: 1;
   .col-#{$i} {
     width: 100%/12 * $i;
   }
-  $i:$i+1;
+  $i: $i + 1;
 }
 @for $i from 1 through 12 {
   .col-#{$i} {
